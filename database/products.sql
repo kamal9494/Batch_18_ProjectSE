@@ -1,0 +1,144 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Nov 18, 2022 at 02:56 PM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 8.1.10
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `gallanshop`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
+--
+
+CREATE TABLE `products` (
+  `productID` int(11) NOT NULL,
+  `productname` varchar(100) NOT NULL,
+  `price` int(11) NOT NULL,
+  `category` varchar(100) NOT NULL,
+  `product_image` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`productID`, `productname`, `price`, `category`, `product_image`) VALUES
+(134, 'BEAUTY BALM', 499, 'beauty', 'PROD_20221118041218747062.png'),
+(135, 'LOREAL CONDITIONER', 600, 'beauty', 'PROD_20221118041333546124.png'),
+(136, 'UNDER EYE CREAM', 300, 'beauty', 'PROD_20221118041420093311.png'),
+(137, 'YVES ROCHER', 345, 'beauty', 'PROD_20221118041732356241.png'),
+(138, 'LOREAL PARIS SHAMPOO', 200, 'beauty', 'PROD_20221118042412023130.png'),
+(139, 'YVES ROCHER', 344, 'beauty', 'PROD_20221118042450259215.png'),
+(140, 'CUCUMBER TONER', 989, 'beauty', 'PROD_20221118042527248609.png'),
+(141, 'MAYBELLINE', 200, 'beauty', 'PROD_20221118042613005793.png'),
+(142, 'INSIGHT PINK', 349, 'beauty', 'PROD_20221118042643321805.png'),
+(143, 'MIRROR', 399, 'beauty', 'PROD_20221118042711211270.png'),
+(144, 'SLIM FIT JEANS PINK', 699, 'women bottom', 'PROD_20221118031028116848.png'),
+(145, 'SLIM FIT JEANS (BLACK)', 599, 'women bottom', 'PROD_20221118031121227005.png'),
+(146, 'SLIM FIT JEANS', 499, 'women bottom', 'PROD_20221118031157706609.png'),
+(147, 'SLIM FIT JEANS', 455, 'women bottom', 'PROD_20221118064447476082.png'),
+(148, 'SLIM FIT JEANS (WHITE)', 566, 'women bottom', 'PROD_20221118064528280525.png'),
+(149, 'SLIM FIT JEANS (LIGHT PINK)', 499, 'women bottom', 'PROD_20221118064559708505.png'),
+(150, 'SLIM FIT JEANS (LIGHT GREEN)', 344, 'women bottom', 'PROD_20221118064640528273.png'),
+(151, 'SLIM FIT JEANS WOMEN', 455, 'women bottom', 'PROD_20221118064714394294.png'),
+(152, 'SLIM FIT JEANS (YELLOW)', 544, 'women bottom', 'PROD_20221118064809979648.png'),
+(153, 'DNMX', 1999, 'men bottom', 'PROD_20221118085304459521.png'),
+(154, 'BULL', 2499, 'men bottom', 'PROD_20221118085351836532.png'),
+(155, 'BUFF', 1299, 'men bottom', 'PROD_20221118085414684526.png'),
+(156, 'DRK', 2999, 'men bottom', 'PROD_20221118085439764313.png'),
+(157, 'FLY', 1499, 'men bottom', 'PROD_20221118085507110021.png'),
+(159, 'TEMP', 1499, 'men bottom', 'PROD_20221118085629614458.png'),
+(160, 'EAGLE', 1999, 'men bottom', 'PROD_20221118085702190305.png'),
+(161, 'DNMX', 699, 'men top', 'PROD_20221118085745445339.png'),
+(162, 'EAGLE', 599, 'men top', 'PROD_20221118085800197763.png'),
+(163, 'FLY', 599, 'men top', 'PROD_20221118085818684459.png'),
+(164, 'DRK', 1299, 'men top', 'PROD_20221118085841015565.png'),
+(165, 'BULL', 999, 'men top', 'PROD_20221118085855533656.png'),
+(166, 'AMERICAN', 899, 'men top', 'PROD_20221118085922048641.png'),
+(167, 'INDIAN', 1199, 'men top', 'PROD_20221118085939244694.png'),
+(168, 'MACHINE', 999, 'men top', 'PROD_20221118085955759622.png'),
+(169, 'ASD FASHIONS', 499, 'men top', 'PROD_20221118090013479596.png'),
+(170, 'TRILLER', 699, 'men top', 'PROD_20221118090027420946.png'),
+(171, 'DNMX', 399, 'women top', 'PROD_20221118090126150223.png'),
+(172, 'AMERICAN', 599, 'women top', 'PROD_20221118090140070346.png'),
+(173, 'FLYER', 499, 'women top', 'PROD_20221118090213411970.png'),
+(174, 'INDIAN', 599, 'women top', 'PROD_20221118090231089998.png'),
+(175, 'DRK', 709, 'women top', 'PROD_20221118090253778363.png'),
+(176, 'SANDY', 499, 'women top', 'PROD_20221118090308864087.png'),
+(177, 'TAPOUT', 699, 'women top', 'PROD_20221118090329249234.png'),
+(178, 'CASSY', 299, 'women top', 'PROD_20221118090343434490.png'),
+(179, 'ZEEPY', 569, 'women top', 'PROD_20221118090417080348.png'),
+(181, 'TEMP', 399, 'boy', 'PROD_20221118090953026929.png'),
+(182, 'DNMX', 999, 'boy', 'PROD_20221118091006298320.png'),
+(183, 'IDDY', 569, 'boy', 'PROD_20221118091020952026.png'),
+(184, 'SLEE', 469, 'boy', 'PROD_20221118091037228505.png'),
+(185, 'EAGLE', 699, 'boy', 'PROD_20221118091049903208.png'),
+(186, 'DNMX JEANS', 999, 'boy', 'PROD_20221118091109468714.png'),
+(187, 'EAGLE CHINOS', 899, 'boy', 'PROD_20221118091132912601.png'),
+(188, 'AMERICAN', 599, 'boy', 'PROD_20221118091204518561.png'),
+(189, 'SISSY', 699, 'girl', 'PROD_20221118091228105049.png'),
+(190, 'ZIPPY', 599, 'girl', 'PROD_20221118091248051347.png'),
+(191, 'TEENA', 699, 'girl', 'PROD_20221118091303209225.png'),
+(192, 'TRENDY', 799, 'girl', 'PROD_20221118091317148948.png'),
+(193, 'CASSY', 799, 'girl', 'PROD_20221118091418562790.png'),
+(194, 'ETHNNY', 1299, 'girl', 'PROD_20221118091434823578.png'),
+(195, 'DASARIES', 1399, 'girl', 'PROD_20221118091454986477.png'),
+(196, 'SANSKRI', 1299, 'girl', 'PROD_20221118091512334634.png'),
+(197, 'BATA', 599, 'men_shoe', 'PROD_20221118091555907413.png'),
+(198, 'PARAGON', 499, 'men_shoe', 'PROD_20221118091610334636.png'),
+(199, 'NIKE', 799, 'men_shoe', 'PROD_20221118091629584592.png'),
+(200, 'PUMA', 1899, 'men_shoe', 'PROD_20221118091648146348.png'),
+(201, 'FILA', 1299, 'men_shoe', 'PROD_20221118091708342764.png'),
+(202, 'CAMPUS', 1499, 'men_shoe', 'PROD_20221118091737889356.png'),
+(203, 'EAGLE', 999, 'men_shoe', 'PROD_20221118091800113595.png'),
+(204, 'DNMXX', 1289, 'men_shoe', 'PROD_20221118091815105555.png'),
+(205, 'CHANI', 1299, 'men_shoe', 'PROD_20221118091836662843.png'),
+(206, 'DRK', 1499, 'men_shoe', 'PROD_20221118091848174186.png'),
+(207, 'SASSY', 699, 'women_shoes', 'PROD_20221118091931613740.png'),
+(208, 'TEMP', 899, 'women_shoes', 'PROD_20221118091955199083.png'),
+(209, 'DNMX', 899, 'women_shoes', 'PROD_20221118092027390730.png'),
+(210, 'CLASSY', 699, 'women_shoes', 'PROD_20221118092047796934.png'),
+(211, 'ASDF', 799, 'women_shoes', 'PROD_20221118092114106475.png');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`productID`),
+  ADD UNIQUE KEY `product_image` (`product_image`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `productID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=212;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
