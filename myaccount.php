@@ -25,7 +25,7 @@ include('connections/localhost.php');
 	</div>
 	<br>
 	<div class="button-large-div">
-		<a href="logout.php"><button class="btn btn-primary">Logout</button></a>
+		<a href="logout.php"><button class="btn btn-danger">Logout</button></a>
 	</div>
 </center>
 
